@@ -1,7 +1,7 @@
 # Личный проект «Киноман» [![Build status][travis-image]][travis-url]
 
 * Студент: [Евгений Бервяченок](https://up.htmlacademy.ru/ecmascript/9/user/151813).
-* Наставник: `Неизвестно`.
+* Наставник: [Семён Якушев](https://htmlacademy.ru/profile/id1118791).
 
 ---
 
