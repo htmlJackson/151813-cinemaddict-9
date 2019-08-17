@@ -168,5 +168,5 @@ export const createPopupMarkup = () => {
         </section>
       </div>
     </form>
-  </section>`
+  </section>`;
 };

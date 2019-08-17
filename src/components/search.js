@@ -7,5 +7,5 @@ export const createSearchMarkup = () => {
     </svg>
     <button type="submit" class="visually-hidden">Search</button>
     <button class="search__reset" type="reset">Reset</button>
-  </form>`
+  </form>`;
 };

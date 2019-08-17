@@ -45,6 +45,5 @@ export const createStatisticMarkup = () => {
         <canvas class="statistic__chart" width="1000"></canvas>
       </div>
 
-    </section>
-  `
+    </section>`;
 };

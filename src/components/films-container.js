@@ -26,5 +26,5 @@ export const createFilmsContainerMarkup = () => {
 
         </div>
       </section>
-    </section>`
+    </section>`;
 };
