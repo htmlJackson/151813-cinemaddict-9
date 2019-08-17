@@ -1,12 +1,12 @@
-import {searchMarkup} from './components/search.js';
-import {rankMarkup} from './components/rank.js';
-import {menuMarkup} from './components/menu.js';
-import {cardMarkup} from './components/card.js';
-import {showmoreMarkup} from './components/showmore.js';
-import {popupMarkup} from './components/popup.js';
-import {filmsContainerMarkup} from './components/films-container.js';
+import {createSearchMarkup} from './components/search.js';
+import {createRankMarkup} from './components/rank.js';
+import {createMenuMarkup} from './components/menu.js';
+import {createCardMarkup} from './components/card.js';
+import {createShowmoreMarkup} from './components/showmore.js';
+import {createPopupMarkup} from './components/popup.js';
+import {createFilmsContainerMarkup} from './components/films-container.js';
 
-const renderElement = (container, markup) => {
+const render = (container, markup) => {
   container.insertAdjacentHTML(`beforeend`, markup);
 };
 
@@ -19,11 +19,11 @@ const CARDS = {
 const headerElement = document.querySelector(`.header`);
 const mainElement = document.querySelector(`.main`);
 
-renderElement(headerElement, searchMarkup);
-renderElement(headerElement, rankMarkup);
+render(headerElement, createSearchMarkup());
+render(headerElement, createRankMarkup());
 
-renderElement(mainElement, menuMarkup);
-renderElement(mainElement, filmsContainerMarkup);
+render(mainElement, createMenuMarkup());
+render(mainElement, createFilmsContainerMarkup());
 
 const films = document.querySelector(`.films`);
 
@@ -34,15 +34,15 @@ const filmsListTopRatedContainer = films.querySelectorAll(`.films-list--extra`)[
 const filmsListMostCommentedContainer = films.querySelectorAll(`.films-list--extra`)[1].querySelector(`.films-list__container`);
 
 for (let i = 0; i < CARDS.listed; i++) {
-  renderElement(filmsListContainer, cardMarkup);
+  render(filmsListContainer, createCardMarkup());
 };
 
-renderElement(filmsList, showmoreMarkup);
+render(filmsList, createShowmoreMarkup());
 
 for (let i = 0; i < CARDS.topRated; i++) {
-  renderElement(filmsListTopRatedContainer, cardMarkup);
+  render(filmsListTopRatedContainer, createCardMarkup());
 };
 
 for (let i = 0; i < CARDS.mostCommented; i++) {
-  renderElement(filmsListMostCommentedContainer, cardMarkup);
+  render(filmsListMostCommentedContainer, createCardMarkup());
 };
